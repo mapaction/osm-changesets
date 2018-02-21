@@ -11,9 +11,10 @@
         `-- 101_osm
             `-- region
                 |-- baseline
-                |-- previous
                 |-- latest
                 `-- updates
+                    |-- cumulative
+                    `-- incremental
 </pre>
 
 Where `region` is derived from the downloaded OSM PBF file
@@ -25,8 +26,8 @@ Where `region` is derived from the downloaded OSM PBF file
 
 * Downloads the latest OSM PBF file from the given URL to the `latest` directory
 * Creates an incremental difference file by comparing the `latest` and `previous` PBF files
-  and stores this in the `updates` directory with an appropriate name and
+  and stores this in the `updates/incremental` directory with an appropriate name and
   timestamp.
 * Creates a cumulative difference file by comparing the `latest` and `baseline` PBF files
-  and stores this in the `updates` directory with an appropriate name and
+  and stores this in the `updates/cumulative` directory with an appropriate name and
   timestamp.

@@ -12,7 +12,7 @@ for them to download the whole OSM data file again.
 
 * Tool **1 - Create Difference File**. This tool is intended to be run by Support Base when a field team is deployed and they have limited internet bandwidth. It takes as input two OSM .PBF format files, one of which should be the OSM data that the field team deployed with and the other should be the latest version of the OSM data. The tool will create a file that represents only the difference between those two input files, which should hopefully be much smaller than either of the actual input files themselves and which can therefore be more easily transferred to the Field Team. The Python script called by this tool is `1_create_difference_SB.py`.
 
-* Tool **2 - Append Difference File**. This is effectively the reverse of Tool 1 and is intended to be run by the Field Team. It will take the original OSM .PBF file from the start of the deployment, and the difference file provided by Support Base. It will output a new .PBF file that reflects all the changes and is therefore up-to-date. The python script called by this tool is `2_append_differnce_FT.py`.
+* Tool **2 - Append Difference File**. This is effectively the reverse of Tool 1 and is intended to be run by the Field Team. It will take the original OSM .PBF file from the start of the deployment, and the difference file provided by Support Base. It will output a new .PBF file that reflects all the changes and is therefore up-to-date. The python script called by this tool is `2_append_difference_FT.py`.
 
 ### Under the hood
 
